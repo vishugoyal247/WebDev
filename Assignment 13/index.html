@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var arr = [];
+        var res=0, count=0;
+        while(num !=0 )
+        {
+            var num  = +prompt("Enter the number : ");
+            res+=num;
+            count+=1;
+            arr.push(num);
+        }
+        
+        var avg = res/(count-1);
+        document.write(`<div>The numbers are : </div>`);
+        for(let i=0; i<arr.length; i++)
+        {
+            if(arr[i]>avg)
+            {
+                document.write(`<div> ${arr[i]}</div>`);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

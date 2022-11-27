@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function showMessage(event)
+        {
+            var num = event.target.value;
+            
+            const mydiv = document.getElementById("table");
+
+            for(var i=1; i<=10; i++)
+            {
+                mydiv.innerHTML = mydiv.innerHTML+ `<div>${num} * ${i} = ${num * i} </div>`;
+            }
+        }
+    </script>
+
+
+    <div>
+        <input type="number" placeholder="Enter the number"  oninput="showMessage(event)"/>
+    </div>
+
+    <div id="table">
+
+    </div>
+
+</body>
+</html>

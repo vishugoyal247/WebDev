@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var fav = "apple";
+        var out=0;
+        for(var i=0; i<5;i++){
+            var guess=prompt("Guess my fav fruit");
+            if(guess==fav && i==0){
+                out=50;
+                break;
+            }
+            else if(guess==fav && i==1){
+                out=40;
+                break;
+            }
+            else if(guess==fav && i==2){
+                out=30;
+                break;
+            }
+            else if(guess==fav && i==3){
+                out=20;
+                break;
+            }
+            else if(guess==fav && i==40){
+                out=10;
+                break;
+            }
+        }
+        if(out==0)
+        {
+            document.write("You lost");
+        }
+        else{
+            document.write(`You earned ${out} points`);
+        }
+    </script>
+
+
+</body>
+</html>
