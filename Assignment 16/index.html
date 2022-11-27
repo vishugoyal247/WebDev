@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="tableOf" type="number" placeholder="Table Of" min="1" class="border-solid border-2 border-black rounded mt-5 ml-5">
+    <input id="till" type="number" placeholder="Till" min="1" class="border-solid border-2 border-black rounded" >
+    <button class="bg-blue-500 rounded w-48" onclick="showTable()" >Show Table</button>
+
+    <div id="showTable"></div>
+
+    <script>
+        function showTable()
+        {
+            var table = document.getElementById("tableOf").value;
+            var till = document.getElementById("till").value;
+
+            var mydiv = document.getElementById("showTable");
+            mydiv.innerHTML = "";
+
+            for( var i =1; i<= till; i++)
+            {
+                mydiv.innerHTML += `<div class=" pl-5 ">${table} * ${i} = ${table*i}</div>`;
+            }
+        }
+    </script>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

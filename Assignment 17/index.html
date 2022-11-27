@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="flex p-4 gap-x-5 ">
+        <input type="number" id='i' placeholder="Quantity?" min="0" class="border-black border-2 rounded-md p-2">
+        <select id="i1" class="border-2 border-black rounded-md">
+            <option value="km">Kilometer</option>
+            <option value="m">meter</option>
+            <option value="cm">centimeter</option>
+            <option value="mm">milimeter</option>
+        </select>
+
+        <p class=" self-center">To</p>
+
+        <select id="i2" class="border-2 border-black rounded-md">
+            <option value="mm">milimeter</option>
+            <option value="cm">centimeter</option>
+            <option value="m">meter</option>
+            <option value="km">Kilometer</option>
+        </select>
+        <button class="border-2 bg-blue-400 p-2 rounded-md" onclick="convert()">Convert</button>
+        
+    </div>
+    <div id="mdiv" class="p-4 font-bold"></div>
+
+    <script>
+        function convert() {
+            let a = document.getElementById('i').value;
+            let s1 = document.getElementById('i1').value;
+            let s2 = document.getElementById('i2').value;
+
+            let out=document.getElementById('mdiv');
+            out.innerHTML='';
+
+            if (s1 == 'km' && s2 == 'mm') {
+                out.innerHTML = `<div>${a} kilometer is ${1000000 * a} millimeter.</div>`;
+
+            }
+            else if (s1 == 'm' && s2 == 'mm') {
+                out.innerHTML = `<div>${a} meter is ${1000 * a} millimeter.</div>`;
+            }
+            else if (s1 == 'cm' && s2 == 'mm') {
+                out.innerHTML = `<div>${a} centimeter is ${10 * a} millimeter.</div>`;
+            }
+            else if (s1 == 'mm' && s2 == 'mm') {
+                out.innerHTML = `<div>${a} millimeter is ${a} millimeter.</div>`;
+            }
+            else if (s1 == 'km' && s2 == 'm') {
+                out.innerHTML = `<div>${a} kilometer is ${1000 * a} meter.</div>`;
+            }
+            else if (s1 == 'm' && s2 == 'm') {
+                out.innerHTML = `<div>${a} meter is ${a} meter.</div>`;
+            }
+            else if (s1 == 'cm' && s2 == 'm') {
+                out.innerHTML = `<div>${a} centimeter is ${a / 100} meter.</div>`;
+            }
+            else if (s1 == 'mm' && s2 == 'm') {
+                out.innerHTML = `<div>${a} millimeter is ${a / 1000} meter.</div>`;
+            }
+            else if (s1 == 'km' && s2 == 'cm') {
+                out.innerHTML = `<div>${a} kilometer is ${1000 * a} meter.</div>`;
+            }
+            else if(s1 == '')
+
+
+        }
+
+        
+    </script>
+
+</body>
+
+</html>
