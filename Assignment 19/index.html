@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number 2.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <h2 class=" text-center text-3xl mt-8">Prime Number 2.0</h2>
+    <div class="flex justify-center mt-8 h-12">
+        <input id="s" class="border-2 border-black mr-2 rounded-md text-center bg-yellow-100" type="number" placeholder="start">
+        <input id="e" class="border-2 border-black ml-2 rounded-md text-center bg-yellow-100" type="number" placeholder="end">
+    </div>
+    <div class="flex justify-center my-8">
+        <button onclick="isPrime()" class="border-2 border-black rounded-md bg-black text-white px-12 py-2 ">
+            Check
+        </button>
+    </div>
+
+    <div id="result">
+
+    </div>
+    <script src="./app.js" ></script>   
+</body>
+
+</html>
